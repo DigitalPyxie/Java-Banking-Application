@@ -27,7 +27,7 @@ public abstract class Account {
         return balance;
     }
 
-    public int getLastTranscation(){
+    public int getLastTransaction(){
         return transactionHistory;
     }
 
