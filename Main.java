@@ -13,7 +13,7 @@ public class Bank {
 
         int option;
         do {
-            System.out.println("Welcome " + account.getCustomerName + "\nAccount: " + account.getAccountNumber());
+            System.out.println("Welcome " + account.getCustomerName() + "\nAccount: " + account.getAccountNumber());
             System.out.println("Please select from the options below: ");
             System.out.println("1. Display Balance");
             System.out.println("2. Deposit");
@@ -23,6 +23,7 @@ public class Bank {
 
             System.out.println("Selection: ");
             option = scanner.nextInt();
+        
 
            switch (option) {
                 case 1:
@@ -34,7 +35,8 @@ public class Bank {
                     int depositAmount = scanner.nextInt();
                     account.deposit(depositAmount);
                     System.out.println("R" + depositAmount + " deposited into your Account.");
-                    //Need to put the new balance here
+                    System.out.println("New Account Balance: R" + account.getBalance());
+                   
                     break;
 
                 case 3:
@@ -42,7 +44,8 @@ public class Bank {
                     int withdrawAmount = scanner.nextInt();
                     account.withdraw(withdrawAmount);
                     System.out.println("R" + withdrawAmount + " withdrawn from your Account.");
-                    //Need to put the remaining amount here
+                    System.out.println("New Account Balance: R" + account.getBalance());
+                    
                     break;
 
                 case 4:
@@ -66,3 +69,4 @@ public class Bank {
          
         }
     }
+
